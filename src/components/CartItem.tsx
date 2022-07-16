@@ -14,16 +14,16 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item == null) return null
 
   return (
-    <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+    <Stack direction="horizontal" gap={2} className="d-flex align-items-center" style={{height:"400px"}}>
       <img
         src={item.imgUrl}
-        style={{ width: "125px", height: "200px", objectFit: "cover" }}
+        style={{ width: "125px", height: "400px", objectFit: "cover" }}
       />
       <div className="me-auto">
-        <div>
+        <div style={{fontSize:"20px"}}>
           {item.name}{" "}
           {quantity > 1 && (
-            <span className="text-muted" style={{ fontSize: "20px" }}>
+            <span className="text-muted">
               x{quantity}
             </span>
           )}
